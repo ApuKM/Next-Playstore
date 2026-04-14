@@ -27,7 +27,7 @@ const InstallToggleButton = ({ app }) => {
       className={`btn ${isInstalled ? "opacity-80" : "bg-purple-500"} text-white`}
       onClick={handleInstallNow}
     >
-      Install Now
+     {isInstalled ? "App Installed" : "Install Now"}
     </button>
   );
 };

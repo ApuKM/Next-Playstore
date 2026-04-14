@@ -107,7 +107,7 @@ const AppDetailsPage = async ({ params }) => {
             <div className="flex flex-wrap gap-3">
               {/* <InstallToggleButton app={app} /> */}
               <InstallToggleButton app={app} />
-              <Link href="/apps" className="btn btn-ghost btn-lg">
+              <Link href="/apps" className="btn btn-ghost">
                 Back to apps
               </Link>
             </div>
