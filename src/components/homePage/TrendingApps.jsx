@@ -25,7 +25,7 @@ const TrendingApps = async ({ from }) => {
 
   // console.log(loading, "loading");
 
-  console.log(from, "from");
+  // console.log(from, "from");
 
   return (
     <div className="container mx-auto my-[60px]">
@@ -46,19 +46,19 @@ const TrendingApps = async ({ from }) => {
         </div>
       ) : ( */}
       <div className="grid grid-cols-3 gap-5">
-        {apps
-          .slice(0, from === "home" ? 9 : apps.length )
-          .map((app, ind) => {
-            return <AppCard app={app} key={ind} />;
-          })}
+        {apps.slice(0, from === "home" ? 9 : apps.length).map((app, ind) => {
+          return <AppCard app={app} key={ind} />;
+        })}
       </div>
       {/* )} */}
 
-      <div className="text-center mt-4">
-        <Link href={"/apps"}>
-          <button className="btn bg-purple-500 text-white">View All</button>
-        </Link>
-      </div>
+      {from === "home" && (
+        <div className="text-center mt-4">
+          <Link href={"/apps"}>
+            <button className="btn bg-purple-500 text-white">View All</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
