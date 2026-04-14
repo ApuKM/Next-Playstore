@@ -1,4 +1,5 @@
 // import InstallToggleButton from "@/components/apps/InstallToggleButton";
+import InstallToggleButton from "@/components/apps/InstallToggleButton";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -105,7 +106,7 @@ const AppDetailsPage = async ({ params }) => {
 
             <div className="flex flex-wrap gap-3">
               {/* <InstallToggleButton app={app} /> */}
-              {/* <InstallToggleButton app={app} /> */}
+              <InstallToggleButton app={app} />
               <Link href="/apps" className="btn btn-ghost btn-lg">
                 Back to apps
               </Link>
